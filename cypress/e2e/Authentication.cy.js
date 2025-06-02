@@ -50,7 +50,7 @@ describe("Authentication",()=>{
         should("have.text","Epic sadface: Username is required");//verifying error message
     })
 
-    it.only("Login with empty password",()=>{
+    it("Login with empty password",()=>{
         ln.enterUsername("standard_user"); //entering username
         ln.enterEmptyPassword(); //entering password
         ln.clickLoginButton(); //clicking login button
