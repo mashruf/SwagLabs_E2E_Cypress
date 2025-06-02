@@ -1,4 +1,4 @@
-import Login from "../POM/Login";
+import Login from "../POM/login.js";
 
 describe("Authentication",()=>{
     
