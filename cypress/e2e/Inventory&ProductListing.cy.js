@@ -32,7 +32,7 @@ describe("Inventory and product listing", () => {
         })
     })
 
-    it("Sort products alphabetically", () => {
+    it("Sort products by name", () => {
 
         //Name (A to Z)
         let arr = [];
@@ -58,10 +58,12 @@ describe("Inventory and product listing", () => {
             let originalList = [...arr].join(",");
             let descendingList = [...arr].sort().reverse().join(",");
             expect(descendingList).to.deep.equal(originalList);//Validating name Z to A
-            arr.length = 0;
         })
+    })
 
+    it("Sort product by price",()=>{
         //Price (low to high)
+        let arr = [];
         cy.get(".product_sort_container").select("Price (low to high)");
         cy.get(".inventory_item_price").each((price) => {
             let nameOfProduct = price.text();
@@ -86,7 +88,6 @@ describe("Inventory and product listing", () => {
             let originalList = [...arr].join(",");
             let descendingList = [...arr].sort((a, b) => b - a).join(",");
             expect(descendingList).to.deep.equal(originalList);//Validating price high to low
-            arr.length = 0;
         })
     })
 
