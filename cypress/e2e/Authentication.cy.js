@@ -6,7 +6,7 @@ describe("Authentication",()=>{
     const ln = new Login();
 
     //will visit the site before every testcase
-    beforeEach("",()=>{
+    beforeEach(()=>{
         cy.visit('/');
     })
 
