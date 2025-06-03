@@ -13,6 +13,7 @@ describe("Inventory and product listing", () => {
     })
 
     it("View product list", () => {
+        
         //validating number of item
         cy.get(".inventory_item").should("have.length", 6);
 
@@ -62,6 +63,7 @@ describe("Inventory and product listing", () => {
     })
 
     it("Sort product by price",()=>{
+        
         //Price (low to high)
         let arr = [];
         cy.get(".product_sort_container").select("Price (low to high)");
@@ -172,6 +174,7 @@ describe("Inventory and product listing", () => {
     })
 
     it("Visit product detail page with invalid product ID", () => {
+       
         // Instead of cy.visit (which resets sessionStorage), use JS redirect
         cy.window().then((win) => {
             win.location.href = '/inventory-item.html?id=10';
