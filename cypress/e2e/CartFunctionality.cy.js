@@ -66,6 +66,21 @@ describe("Cart functionality", () => {
             })
         })
 
+    })
+
+    it.only("Remove product from inventory view",()=>{
+
+        //verifying user is on inventory page
+        cy.url().should("eq","https://www.saucedemo.com/inventory.html");
+
+        //Adding product to cart
+        cy.get("#add-to-cart-sauce-labs-bike-light").click();
+        
+        //Verifying product is added and removed afterward
+        cy.get("#remove-sauce-labs-bike-light").should("contain","Remove").click();
+
+        //verifying product is removed
+        cy.get("#add-to-cart-sauce-labs-backpack").should("contain","Add to cart");
 
     })
 })
