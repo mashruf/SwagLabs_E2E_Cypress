@@ -120,7 +120,9 @@ describe("Inventory and product listing", () => {
         //verify price
         cy.get(".inventory_details_price").should("contain", "$9.99");
 
+
         cy.go("back");
+
 
         //Sauce Labs Bolt T-Shirt
         cy.contains("a", "Sauce Labs Bolt T-Shirt").click();
@@ -133,7 +135,9 @@ describe("Inventory and product listing", () => {
         //verify price
         cy.get(".inventory_details_price").should("contain", "$15.99");
 
+
         cy.go("back");
+
 
         //Sauce Labs Fleece Jacket
         cy.contains("a", "Sauce Labs Fleece Jacket").click();
@@ -146,7 +150,9 @@ describe("Inventory and product listing", () => {
         //verify price
         cy.get(".inventory_details_price").should("contain", "$49.99");
 
+
         cy.go("back");
+
 
         //Sauce Labs Onesie
         cy.contains("a", "Sauce Labs Onesie").click();
@@ -159,8 +165,10 @@ describe("Inventory and product listing", () => {
         //verify price
         cy.get(".inventory_details_price").should("contain", "$7.99");
 
+
         cy.go("back");
 
+        
         //Test.allTheThings() T-Shirt (Red)
         cy.contains("a", "Test.allTheThings() T-Shirt (Red)").click();
         //verify details of description
