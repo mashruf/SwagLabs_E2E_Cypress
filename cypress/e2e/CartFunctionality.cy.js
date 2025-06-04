@@ -83,4 +83,28 @@ describe("Cart functionality", () => {
         cy.get("#add-to-cart-sauce-labs-backpack").should("contain","Add to cart");
 
     })
+
+    it.only("Remove product from cart page",()=>{
+        
+        //Adding product to cart
+        cy.get("#add-to-cart-sauce-labs-bike-light").click();
+
+        //Verifying product is added to cart
+        cy.get("#remove-sauce-labs-bike-light").should("contain","Remove");
+
+        //visit cart
+        cy.get(".shopping_cart_link").click();
+
+        //verifying user is on cart
+        cy.url().should("eq","https://www.saucedemo.com/cart.html");
+
+        //verifying item in the card is visible
+        cy.get(".cart_item").should("be.visible");
+
+        //remove item from cart
+        cy.get("#remove-sauce-labs-bike-light").click();
+
+        //verifying item in the card does not exist
+        cy.get(".cart_item").should("not.exist");
+    })
 })
