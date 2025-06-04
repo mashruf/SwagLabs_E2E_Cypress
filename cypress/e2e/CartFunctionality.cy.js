@@ -1,30 +1,71 @@
 import Login from "../POM/login";
 
-describe("Cart functionality",()=>{
-    
+describe("Cart functionality", () => {
+
     const ln = new Login();
-    
-    beforeEach(()=>{
+
+    beforeEach(() => {
         cy.visit("/");
         ln.enterUsername("standard_user");
         ln.enterPassword("secret_sauce");
         ln.clickLoginButton();
 
     })
-    it("Add one product to cart",()=>{
+    it("Add one product to cart", () => {
 
         //adding product to cart
         cy.get("#add-to-cart-sauce-labs-bike-light").click();
+
         //visiting the cart
         cy.get(".shopping_cart_badge").click();
+
         //verifying cart url
-        cy.url().should("eq","https://www.saucedemo.com/cart.html");
+        cy.url().should("eq", "https://www.saucedemo.com/cart.html");
+
         //item should be visible in cart 
         cy.get(".cart_item").should("be.visible");
+
         //verifying the quantity
-        cy.get(".cart_quantity").should("contain",1);
-        //verifying the description of the item in the cart
-        cy.contains(".cart_item_label","Sauce Labs Bike Light").should("be.visible");
-  
+        cy.get(".cart_quantity").should("contain", 1);
+
+        //verifying the visibility of item name
+        cy.get(".inventory_item_name").should("be.visible");
+
+        //verifying the visibility of item description
+        cy.get(".inventory_item_desc").should("be.visible");
+
+        //verifying the visibility of item price
+        cy.get(".inventory_item_price").should("be.visible");
+
+
+    })
+
+    it("Add multiple products to cart", () => {
+
+        //adding multiple product to cart
+        cy.get("#add-to-cart-sauce-labs-bike-light").click();
+        cy.get("#add-to-cart-sauce-labs-fleece-jacket").click();
+        cy.get("#add-to-cart-sauce-labs-onesie").click();
+
+        //visiting the cart
+        cy.get(".shopping_cart_badge").click();
+
+        //verifying cart url
+        cy.url().should("eq", "https://www.saucedemo.com/cart.html");
+
+        //verifying multiple products added to cart
+        cy.get(".cart_item").should("have.length", 3);
+        cy.get(".cart_item").each((item) => {
+            cy.wrap(item).within(() => {
+
+                cy.get(".cart_quantity").should("be.visible");
+                cy.get(".inventory_item_name").should("be.visible");
+                cy.get(".inventory_item_desc").should("be.visible");
+                cy.get(".inventory_item_price").should("be.visible");
+            
+            })
+        })
+
+
     })
 })
