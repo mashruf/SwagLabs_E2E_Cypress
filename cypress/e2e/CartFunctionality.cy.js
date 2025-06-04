@@ -1,4 +1,4 @@
-import Login from "../POM/login";
+import Login from "../POM/login.js";
 
 describe("Cart functionality", () => {
 
@@ -119,4 +119,5 @@ describe("Cart functionality", () => {
         //verifying product is removed and can not be removed again
         cy.get("#add-to-cart-sauce-labs-bike-light").should("not.contain","Remove");
     })
+
 })
