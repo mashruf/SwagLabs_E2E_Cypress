@@ -41,10 +41,13 @@ The test suite covers:
    git clone https://github.com/mashruf/SwagLabs_E2E_Cypress.git
    cd SwagLabs_E2E_Cypress
 
-2.Install dependencies:
+2. Install dependencies:
   
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 
-2.Install dependencies:
+### Running Tests Locally
+
+
+
