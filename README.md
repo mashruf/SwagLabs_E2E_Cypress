@@ -49,15 +49,15 @@ The test suite covers:
 
 ### Running Tests Locally
 
-Run the full test suite in headed mode:
+   Run the full test suite in headed mode:
 
       ```bash
       npx cypress open
 
-Run tests headlessly (recommended for CI):
+   Run tests headlessly (recommended for CI):
 
-   ```bash
-   npx cypress run
+      ```bash
+      npx cypress run
 
 
 ![cypress report 1](https://github.com/user-attachments/assets/06d77bc2-d936-436a-804b-80ce775fbdfa)
