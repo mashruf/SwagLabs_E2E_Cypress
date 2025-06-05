@@ -47,18 +47,13 @@ The test suite covers:
    npm install
 
 
-### Running Tests Locally
+### 🧪 Running Tests Locally
 
-   Run the full test suite in headed mode:
+You can run the full Cypress test suite using either headed or headless mode:
 
-      ```bash
-      npx cypress open
+```bash
+# Headed mode (opens Cypress Test Runner UI)
+npx cypress open
 
-   Run tests headlessly (recommended for CI):
-
-      ```bash
-      npx cypress run
-
-
-![cypress report 1](https://github.com/user-attachments/assets/06d77bc2-d936-436a-804b-80ce775fbdfa)
-
+# Headless mode (recommended for CI)
+npx cypress run
