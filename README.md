@@ -4,7 +4,7 @@ This repository contains **end-to-end (E2E) tests** for the [Swag Labs](https://
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 - **Test Framework**: Cypress
 - **Target Application**: Swag Labs (https://www.saucedemo.com/)
@@ -13,7 +13,7 @@ This repository contains **end-to-end (E2E) tests** for the [Swag Labs](https://
 
 ---
 
-## 🧪 Test Coverage
+## Test Coverage
 
 The test suite covers:
 
@@ -26,7 +26,7 @@ The test suite covers:
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -47,13 +47,18 @@ The test suite covers:
    npm install
 
 
-### 🧪 Running Tests Locally
+### Running Tests Locally
 
 #### You can run the full Cypress test suite using either headed or headless mode:
+Headed mode (opens Cypress Test Runner UI):
 
-```bash
-# Headed mode (opens Cypress Test Runner UI)
-npx cypress open
+   ```bash
+   npx cypress open
+```
+Headless mode (recommended for CI):
+   
+   ```bash
+   npx cypress run
+```
+![cypress report 1](https://github.com/user-attachments/assets/a18536a7-cbc7-40e4-bee6-f7127b316a60)
 
-# Headless mode (recommended for CI)
-npx cypress run
