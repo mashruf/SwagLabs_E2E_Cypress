@@ -49,7 +49,7 @@ The test suite covers:
 
 ### 🧪 Running Tests Locally
 
-You can run the full Cypress test suite using either headed or headless mode:
+#### You can run the full Cypress test suite using either headed or headless mode:
 
 ```bash
 # Headed mode (opens Cypress Test Runner UI)
