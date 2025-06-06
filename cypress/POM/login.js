@@ -23,7 +23,5 @@ class Login{
 
 
 }
-
-
 //exporting the Login class
 export default Login;
