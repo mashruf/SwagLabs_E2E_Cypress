@@ -61,5 +61,6 @@ Headless mode (recommended for CI):
    ```bash
    npx cypress run
 ```
-![cypress report 1](https://github.com/user-attachments/assets/a18536a7-cbc7-40e4-bee6-f7127b316a60)
+![cypress_allure](https://github.com/user-attachments/assets/2c042efd-47b2-465e-b55b-55e3ccc9fddc)
+
 
