@@ -35,17 +35,18 @@ The test suite covers:
 
 ### Installation
 
-1. Clone the repo:
+#### 1. Clone the repo:
 
-   ```bash
+   ```
    git clone https://github.com/mashruf/SwagLabs_E2E_Cypress.git
    cd SwagLabs_E2E_Cypress
+   ```
 
-2. Install dependencies:
+#### 2. Install dependencies:
   
-   ```bash
+   ```
    npm install
-
+   ```
 
 ### Running Tests Locally
 
@@ -53,12 +54,12 @@ The test suite covers:
 
 Headed mode (opens Cypress Test Runner UI):
 
-   ```bash
+   ```
    npx cypress open
 ```
 Headless mode (recommended for CI):
    
-   ```bash
+   ```
    npx cypress run
 ```
 ![cypress_allure](https://github.com/user-attachments/assets/2c042efd-47b2-465e-b55b-55e3ccc9fddc)
