@@ -39,6 +39,7 @@ The test suite covers:
 
    ```
    git clone https://github.com/mashruf/SwagLabs_E2E_Cypress.git
+
    cd SwagLabs_E2E_Cypress
    ```
 
